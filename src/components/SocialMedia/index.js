@@ -6,7 +6,7 @@ import {
   FiSlack,
   FiInstagram, // Import FiInstagram
   FiTikTok,   // Import FiTikTok
-} from 'react-icons/fi'
+} from 'react-icons/fi';
 import AppLink from '../AppLink'
 
 import styles from './SocialMedia.module.sass'
