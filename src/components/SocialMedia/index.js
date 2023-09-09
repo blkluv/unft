@@ -17,10 +17,6 @@ const socialMedia = [
     url: 'https://www.instagram.com/healxyz',
   },
   {
-    Icon: FiTikTok,
-    url: 'https://www.tiktok.com/@healxyz',
-  },
-  {
     Icon: FiSlack,
     url: 'https://your-slack-url',
   },
