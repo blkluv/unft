@@ -1,16 +1,16 @@
-import React from 'react'
-import cn from 'classnames'
-import { useRouter } from 'next/router'
-import Image from 'next/image'
+import React from 'react';
+import cn from 'classnames';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-import styles from './Description.module.sass'
+import styles from './Description.module.sass';
 
 const Description = ({ info }) => {
-  const { push } = useRouter()
+  const { push } = useRouter();
 
-  const handleClick = href => {
-    push(href)
-  }
+  const handleClick = (href) => {
+    push(href);
+  };
 
   return (
     <div className={styles.section}>
@@ -43,9 +43,6 @@ const Description = ({ info }) => {
               className={styles.preview}
               layout="fill"
               src={info?.metadata?.image?.imgix_url}
-              placeholder="blur"
-              blurDataURL={`${info?.metadata?.image?.imgix_url}?auto=format,compress&q=1&blur=500&w=2`}
-              objectFit="cover"
               alt="Team"
               priority
             />
@@ -53,7 +50,7 @@ const Description = ({ info }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Description
+export default Description;
