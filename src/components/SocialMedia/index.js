@@ -11,24 +11,20 @@ import styles from './SocialMedia.module.sass'
 
 const socialMedia = [
   {
-    Icon: FiTwitter,
-    url: 'https://twitter.com/cosmicjs',
+    Icon: FiInstagram,
+    url: 'https://www.instagram.com/healxyz',
   },
   {
-    Icon: FiFacebook,
-    url: 'https://www.facebook.com/cosmicjs',
-  },
-  {
-    Icon: FiLinkedin,
-    url: 'https://www.linkedin.com/company/cosmicjs/',
-  },
-  {
-    Icon: FiYoutube,
-    url: 'https://www.youtube.com/cosmicjs',
+    Icon: FiTikTok,
+    url: 'https://www.tiktok.com/@healxyz',
   },
   {
     Icon: FiSlack,
-    url: 'https://cosmcijs.slack.com',
+    url: 'https://your-slack-url',
+  },
+  {
+    Icon: FiTwitter,
+    url: 'https://twitter.com/healxyz',
   },
 ]
 

@@ -44,7 +44,7 @@ export const PageMeta = ({ title, description }) => {
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://imgix.cosmicjs.com/5df3a450-0160-11ed-b7be-d956591ad437-unft-2.png?w=1000"
+        content="https://imgix.cosmicjs.com/769bca90-4f30-11ee-9243-81876f0422ae-5df3a450-0160-11ed-b7be-d956591ad437-unft-2.jpg?w=1000"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@CosmicJS" />
@@ -52,7 +52,7 @@ export const PageMeta = ({ title, description }) => {
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content="https://imgix.cosmicjs.com/5df3a450-0160-11ed-b7be-d956591ad437-unft-2.png?w=1000"
+        content="https://imgix.cosmicjs.com/769bca90-4f30-11ee-9243-81876f0422ae-5df3a450-0160-11ed-b7be-d956591ad437-unft-2.jpg?w=1000"
       />
     </Head>
   )
