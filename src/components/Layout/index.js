@@ -33,19 +33,19 @@ const Layout = ({ children, title, navigationPaths }) => {
       <PageMeta
         title={'uNFT Marketplace'}
         description={
-          'uNFT Marketplace built with Cosmic CMS, Next.js, and the Stripe API'
+          'The #1 spiritual economy marketplace'
         }
       />
       <div className={styles.github}>
         <p className={styles.source}>
-          Follow us on TikTok to receive authenticated and donated Heal® services{' '}
+          Follow us on TikTok to find Heal® {' '}
           <span className={styles.github}>
             <a
               className={styles.github}
               href="https://tiktok.com/@healxyz"
               target="_parent"
             >
-              Healr services
+             services
             </a>
           </span>
           .
