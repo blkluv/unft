@@ -24,7 +24,7 @@ const Footers = ({ navigation }) => {
                 objectFit="cntain"
               />
             </AppLink>
-            <div className={styles.info}>The New Spiritual Economy.</div>
+            <div className={styles.info}>The New Spiritual ✨ Purpose Economy</div>
             <div className={styles.version}>
               <div className={styles.details}>Dark theme</div>
               <Theme className="theme-big" />
@@ -34,18 +34,18 @@ const Footers = ({ navigation }) => {
             <Group className={styles.group} item={navigation?.['menu']} />
           </div>
           <div className={styles.col}>
-            <AppLink href={`https://www.cosmicjs.com/features`}>
+            <AppLink href={`https://www.healxyz.com/features`}>
               <p className={styles.category}>About HealXYZ</p>
             </AppLink>
             <AppLink href={`https://docs.cosmicjs.com/`}>
               <p className={styles.text}>Documentation</p>
             </AppLink>
-            <AppLink href={`https://www.cosmicjs.com/contact`}>
+            <AppLink href={`https://www.healxyz.com/contact`}>
               <p className={styles.text}>Contact Us</p>
             </AppLink>
             <SocialMedia className={styles.form} />
             <AppLink
-              href={`https://cosmicjs.us5.list-manage.com/subscribe/post?u=15433aab34aefd5450c23fd94&id=028c29b6ca`}
+              href={`https://healxyz.us5.list-manage.com/subscribe/post?u=15433aab34aefd5450c23fd94&id=028c29b6ca`}
             >
               <button
                 aria-hidden="true"
