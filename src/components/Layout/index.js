@@ -38,14 +38,14 @@ const Layout = ({ children, title, navigationPaths }) => {
       />
       <div className={styles.github}>
         <p className={styles.source}>
-          The source code for this marketplace app is{' '}
+          Follow us on TikTok to receive authenticated and donated Heal® services{' '}
           <span className={styles.github}>
             <a
               className={styles.github}
-              href="https://github.com/cosmicjs/unft-marketplace"
+              href="https://tiktok.com/@healxyz"
               target="_parent"
             >
-              available on GitHub
+              Healr services
             </a>
           </span>
           .
