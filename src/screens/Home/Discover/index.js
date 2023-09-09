@@ -135,7 +135,7 @@ const Discover = ({ info, type }) => {
       <div className={cn('container', styles.container)}>
         <div className={styles.head}>
           <div className={styles.stage}>
-            Create, explore, & collect digital art.
+            Find authentic Heal®️s around the world
           </div>
           <div className={styles.header}>
             <h3 className={cn('h3', styles.title)}>Discover</h3>

@@ -24,7 +24,7 @@ const Footers = ({ navigation }) => {
                 objectFit="cntain"
               />
             </AppLink>
-            <div className={styles.info}>The New Creative Economy.</div>
+            <div className={styles.info}>The New Spiritual Economy.</div>
             <div className={styles.version}>
               <div className={styles.details}>Dark theme</div>
               <Theme className="theme-big" />
@@ -35,7 +35,7 @@ const Footers = ({ navigation }) => {
           </div>
           <div className={styles.col}>
             <AppLink href={`https://www.cosmicjs.com/features`}>
-              <p className={styles.category}>About Cosmic</p>
+              <p className={styles.category}>About HealXYZ</p>
             </AppLink>
             <AppLink href={`https://docs.cosmicjs.com/`}>
               <p className={styles.text}>Documentation</p>
@@ -51,7 +51,7 @@ const Footers = ({ navigation }) => {
                 aria-hidden="true"
                 className={cn('button', styles.button)}
               >
-                Subscribe Newsletter
+                Join Slack
               </button>
             </AppLink>
           </div>
@@ -60,8 +60,8 @@ const Footers = ({ navigation }) => {
       <div>
         <div className={styles.copyright} aria-hidden="true">
           <span className={styles.cosmicGroup}>
-            <p className={styles.powered}>Powered by </p>
-            <a href="https://www.cosmicjs.com">
+            <p className={styles.powered}>Made with </p>
+            <a href="https://luvnft.com">
               <Image
                 className={styles.cosmic}
                 size={{ width: '110px', height: '90px' }}
