@@ -122,9 +122,9 @@ const Selection = ({ info, type }) => {
           </div>
           <div className={styles.sidebar}>
             <div className={styles.info}>
-              Latest upload{' '}
-              <span className={styles.smile} role="img" aria-label="fire">
-                🔥
+              Newest upload{' '}
+              <span className={styles.smile} role="img" aria-label="new">
+               🆕
               </span>
             </div>
             <div className={styles.list}>
