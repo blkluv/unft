@@ -37,15 +37,15 @@ const Footers = ({ navigation }) => {
             <AppLink href={`https://www.healxyz.com/features`}>
               <p className={styles.category}>About HealXYZ</p>
             </AppLink>
-            <AppLink href={`https://docs.cosmicjs.com/`}>
-              <p className={styles.text}>Documentation</p>
+            <AppLink href={`https://instagram.com/healxyz`}>
+              <p className={styles.text}>Instagram</p>
             </AppLink>
             <AppLink href={`https://www.healxyz.com/contact`}>
               <p className={styles.text}>Contact Us</p>
             </AppLink>
             <SocialMedia className={styles.form} />
             <AppLink
-              href={`https://healxyz.us5.list-manage.com/subscribe/post?u=15433aab34aefd5450c23fd94&id=028c29b6ca`}
+              href={`https://join.slack.com/t/healxyz/shared_invite`}
             >
               <button
                 aria-hidden="true"

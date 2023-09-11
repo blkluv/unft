@@ -1,48 +1,49 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import cn from 'classnames'
-import AppLink from '../AppLink'
-import Icon from '../Icon'
-import Image from 'next/image'
-import User from './User'
-import Theme from '../Theme'
-import Modal from '../Modal'
-import OAuth from '../OAuth'
-import { useStateContext } from '../../utils/context/StateContext'
-import { getToken } from '../../utils/token'
+import React, { useState, useEffect, useCallback } from 'react';
+import cn from 'classnames';
+import AppLink from '../AppLink';
+import Icon from '../Icon';
+import Image from 'next/image';
+import User from './User';
+import Theme from '../Theme';
+import Modal from '../Modal';
+import OAuth from '../OAuth';
+import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-react';
+import { useStateContext } from '../../utils/context/StateContext';
+import { getToken } from '../../utils/token';
 
-import styles from './Header.module.sass'
+import styles from './Header.module.sass';
 
 const Headers = ({ navigation }) => {
-  const [visibleNav, setVisibleNav] = useState(false)
-  const [visibleAuthModal, setVisibleAuthModal] = useState(false)
+  const [visibleNav, setVisibleNav] = useState(false);
+  const [visibleAuthModal, setVisibleAuthModal] = useState(false);
 
-  const { cosmicUser, setCosmicUser } = useStateContext()
+  const { cosmicUser, setCosmicUser } = useStateContext();
 
   const handleOAuth = useCallback(
-    user => {
+    (user) => {
       !cosmicUser.hasOwnProperty('id') &&
         user?.hasOwnProperty('id') &&
-        setCosmicUser(user)
+        setCosmicUser(user);
     },
     [cosmicUser, setCosmicUser]
-  )
+  );
 
   useEffect(() => {
-    let isMounted = true
-    const uNFTUser = getToken()
+    let isMounted = true;
+    const uNFTUser = getToken();
 
     if (
       isMounted &&
       !cosmicUser?.hasOwnProperty('id') &&
       uNFTUser?.hasOwnProperty('id')
     ) {
-      setCosmicUser(uNFTUser)
+      setCosmicUser(uNFTUser);
     }
 
     return () => {
-      isMounted = false
-    }
-  }, [cosmicUser, setCosmicUser])
+      isMounted = false;
+    };
+  }, [cosmicUser, setCosmicUser]);
 
   return (
     <>
@@ -52,7 +53,7 @@ const Headers = ({ navigation }) => {
             <Image
               width={256}
               height={120}
-              objectFit='contain'
+              objectFit="contain"
               className={styles.pic}
               src={navigation['logo']?.imgix_url}
               alt="Logo"
@@ -85,9 +86,7 @@ const Headers = ({ navigation }) => {
             <Icon name="search" size="20" />
             Search
           </AppLink>
-          {cosmicUser?.['id'] ? (
-            <User className={styles.user} user={cosmicUser} />
-          ) : (
+          <SignedOut>
             <button
               aria-label="login"
               aria-hidden="true"
@@ -96,7 +95,10 @@ const Headers = ({ navigation }) => {
             >
               Login
             </button>
-          )}
+          </SignedOut>
+          <SignedIn>
+            <a href="/clerk/logout">Logout</a>
+          </SignedIn>
           <button
             aria-label="user-information"
             aria-hidden="true"
@@ -116,7 +118,7 @@ const Headers = ({ navigation }) => {
         />
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export default Headers
+export default Headers;

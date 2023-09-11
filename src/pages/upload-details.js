@@ -173,7 +173,7 @@ const Upload = ({ navigationItems, categoriesType }) => {
           <div className={styles.wrapper}>
             <div className={styles.head}>
               <div className={cn('h2', styles.title)}>
-                Create single collectible
+                Create single Heal🇳
               </div>
             </div>
             <form className={styles.form} action="" onSubmit={submitForm}>
@@ -198,7 +198,7 @@ const Upload = ({ navigationItems, categoriesType }) => {
                   </div>
                 </div>
                 <div className={styles.item}>
-                  <div className={styles.category}>Item Details</div>
+                  <div className={styles.category}>Heal🇳 Details</div>
                   <div className={styles.fieldset}>
                     <TextInput
                       className={styles.field}
@@ -261,7 +261,7 @@ const Upload = ({ navigationItems, categoriesType }) => {
                 </div>
               </div>
               <div className={styles.options}>
-                <div className={styles.category}>Choose collection</div>
+                <div className={styles.category}>Choose tribe</div>
                 <div className={styles.text}>Choose an exiting Categories</div>
                 <Cards
                   className={styles.cards}
@@ -283,7 +283,7 @@ const Upload = ({ navigationItems, categoriesType }) => {
                   onClick={submitForm}
                   type="submit"
                 >
-                  <span>Create item</span>
+                  <span>Start Heal🇳</span>
                   <Icon name="arrow-next" size="10" />
                 </button>
                 {fillFiledMessage && (

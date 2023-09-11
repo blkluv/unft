@@ -32,7 +32,7 @@ const Description = ({ info }) => {
               onClick={() => handleClick('/upload-details')}
               className={cn('button', styles.button)}
             >
-              Create Service
+              Star Heal🇳
             </button>
           </div>
         </div>

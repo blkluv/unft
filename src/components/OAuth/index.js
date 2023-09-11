@@ -83,15 +83,15 @@ const OAuth = ({ className, handleClose, handleOAuth, disable }) => {
   return (
     <div className={cn(className, styles.transfer)}>
       <div className={cn('h4', styles.title)}>
-        Authentication with{' '}
-        <AppLink target="_blank" href={`https://www.cosmicjs.com`}>
-          Cosmic
+         No account? Sign up to{' '}
+        <AppLink target="_blank" href={`https://saved-squid-36.accounts.dev/sign-up`}>
+          HealXYZ
         </AppLink>
       </div>
       <div className={styles.text}>
-        To create an item you need to register an account at{' '}
-        <AppLink target="_blank" href={`https://www.cosmicjs.com`}>
-          Cosmic
+         Heal®️s sign in to start {' '}
+        <AppLink target="_blank" href={`https://saved-squid-36.accounts.dev/sign-in`}>
+         Heal🇳
         </AppLink>
       </div>
       <div className={styles.error}>{fillFiledMessage}</div>

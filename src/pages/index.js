@@ -1,4 +1,5 @@
 import { useEffect, useCallback } from 'react'
+import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-react'
 import { useStateContext } from '../utils/context/StateContext'
 import Layout from '../components/Layout'
 import {
