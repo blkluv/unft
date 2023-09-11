@@ -2,7 +2,7 @@
 
 export default async function authHandler({ body }, res) {
   try {
-    const auth = await fetch('https://dashboard.cosmicjs.com/v3/authenticate', {
+    const auth = await fetch('https://dashboard.healxyz.com/v3/authenticate', {
       method: 'POST',
       headers: {
         'Content-Type': `application/json`,
