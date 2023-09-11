@@ -1,6 +1,7 @@
+import React from 'react'; // Import React
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faTikTok, faSlack, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import AppLink from '../AppLink'; // Import AppLink (ensure the correct path)
+import { faInstagram, faTiktok, faSlack, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import AppLink from '../AppLink';
 
 import styles from './SocialMedia.module.sass';
 
@@ -10,7 +11,7 @@ const socialMedia = [
     url: 'https://www.instagram.com/healxyz',
   },
   {
-    Icon: faTikTok,
+    Icon: faTiktok,
     url: 'https://www.tiktok.com/@healxyz',
   },
   {
