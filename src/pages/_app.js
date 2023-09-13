@@ -6,10 +6,12 @@ import '../styles/app.sass'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <StateContext>
-      <Toaster />
-      <Component {...pageProps} />
-    </StateContext>
+    <ClerkProvider {...pageProps}>
+      <StateContext>
+        <Toaster />
+        <Component {...pageProps} />
+      </StateContext>
+    </ClerkProvider>
   )
 }
 
