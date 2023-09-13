@@ -38,14 +38,14 @@ const Layout = ({ children, title, navigationPaths }) => {
       />
       <div className={styles.github}>
         <p className={styles.source}>
-          Follow us on TikTok to find Heal® {' '}
+          Join our Slack to chat with{' '}
           <span className={styles.github}>
             <a
               className={styles.github}
-              href="https://tiktok.com/@healxyz"
+              href="https://join.slack.com/t/healxyz/shared_invite"
               target="_parent"
             >
-             services
+             Heal®s 
             </a>
           </span>
           .

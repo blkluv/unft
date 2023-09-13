@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import cn from 'classnames';
 import AppLink from '../AppLink';
+import Link from 'next/link'; // Add this import at the top of your file
 import Icon from '../Icon';
 import Image from 'next/image';
 import User from './User';
@@ -48,29 +49,31 @@ const Headers = ({ navigation }) => {
   return (
     <>
       <header className={styles.header}>
-        <div className={cn('container', styles.container)} aria-hidden="true">
-          <AppLink className={styles.logo} href="/">
-            <Image
-              width={256}
-              height={120}
-              objectFit="contain"
-              className={styles.pic}
-              src={navigation['logo']?.imgix_url}
-              alt="Logo"
-              priority
-            />
-          </AppLink>
-          <div className={cn(styles.wrapper, { [styles.active]: visibleNav })}>
-            <nav className={styles.nav}>
-              {navigation['menu']?.map((x, index) => (
-                <AppLink
-                  aria-label="navigation"
-                  className={styles.link}
-                  href={x?.url || `/search`}
-                  key={index}
-                >
-                  {x.title}
-                </AppLink>
+  <div className={cn('container', styles.container)} aria-hidden="true">
+    <Link href="https://healxyz.com" passHref>
+      <a className={styles.logo}>
+        <Image
+          width={256}
+          height={120}
+          objectFit="contain"
+          className={styles.pic}
+          src={navigation['logo']?.imgix_url}
+          alt="Logo"
+          priority
+        />
+      </a>
+    </Link>
+    <div className={cn(styles.wrapper, { [styles.active]: visibleNav })}>
+      <nav className={styles.nav}>
+        {navigation['menu']?.map((x, index) => (
+          <Link
+            href={x?.url || `/search`}
+            key={index}
+          >
+            <a aria-label="navigation" className={styles.link}>
+              {x.title}
+            </a>
+          </Link>
               ))}
             </nav>
           </div>
@@ -97,7 +100,7 @@ const Headers = ({ navigation }) => {
             </button>
           </SignedOut>
           <SignedIn>
-            <a href="/clerk/logout">Logout</a>
+            <a href="https://saved-squid-36.accounts.dev/sign-in">Logout</a>
           </SignedIn>
           <button
             aria-label="user-information"

@@ -1,7 +1,7 @@
-import { useEffect, useCallback } from 'react'
-import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-react'
-import { useStateContext } from '../utils/context/StateContext'
-import Layout from '../components/Layout'
+import { useEffect, useCallback } from 'react';
+import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-react';
+import { useStateContext } from '../utils/context/StateContext';
+import Layout from '../components/Layout';
 import {
   Intro,
   Selection,
@@ -10,9 +10,9 @@ import {
   Categories,
   Discover,
   Description,
-} from '../screens/Home'
-import chooseBySlug from '../utils/chooseBySlug'
-import { getDataByCategory, getAllDataByType } from '../lib/cosmic'
+} from '../screens/Home';
+import chooseBySlug from '../utils/chooseBySlug';
+import { getDataByCategory, getAllDataByType } from '../lib/cosmic';
 
 const Home = ({
   reviews,
@@ -21,37 +21,37 @@ const Home = ({
   categoryTypes,
   navigationItems,
 }) => {
-  const { categories, onCategoriesChange, setNavigation } = useStateContext()
+  const { categories, onCategoriesChange, setNavigation } = useStateContext();
 
   const handleContextAdd = useCallback(
     (category, data, navigation) => {
-      onCategoriesChange({ groups: category, type: data })
-      setNavigation(navigation)
+      onCategoriesChange({ groups: category, type: data });
+      setNavigation(navigation);
     },
     [onCategoriesChange, setNavigation]
-  )
+  );
 
   useEffect(() => {
-    let isMounted = true
+    let isMounted = true;
 
     if (!categories['groups']?.length && isMounted) {
       handleContextAdd(
         categoriesGroup?.groups,
         categoriesGroup?.type,
         navigationItems[0]?.metadata
-      )
+      );
     }
 
     return () => {
-      isMounted = false
-    }
+      isMounted = false;
+    };
   }, [
     categories,
     categoriesGroup,
     categoryTypes,
     handleContextAdd,
     navigationItems,
-  ])
+  ]);
 
   return (
     <Layout navigationPaths={navigationItems[0]?.metadata}>
@@ -69,31 +69,32 @@ const Home = ({
         type={categoriesGroup['type']}
       />
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
 
 export async function getServerSideProps() {
-  const reviews = (await getAllDataByType('reviews')) || []
-  const landing = (await getAllDataByType('landings')) || []
-  const categoryTypes = (await getAllDataByType('categories')) || []
+  const reviews = (await getAllDataByType('reviews')) || [];
+  const landing = (await getAllDataByType('landings')) || [];
+  const categoryTypes = (await getAllDataByType('categories')) || [];
   const categoriesData = await Promise.all(
     categoryTypes?.map(category => {
-      return getDataByCategory(category?.id)
+      return getDataByCategory(category?.id);
     })
-  )
-  const navigationItems = (await getAllDataByType('navigation')) || []
+  );
+  const navigationItems = (await getAllDataByType('navigation')) || [];
 
+  // Ensure data is defined before constructing the categoriesGroup object
   const categoriesGroups = categoryTypes?.map(({ id }, index) => {
-    return { [id]: categoriesData[index] }
-  })
+    return { [id]: categoriesData[index] || null };
+  });
 
   const categoriesType = categoryTypes?.reduce((arr, { title, id }) => {
-    return { ...arr, [id]: title }
-  }, {})
+    return { ...arr, [id]: title };
+  }, {});
 
-  const categoriesGroup = { groups: categoriesGroups, type: categoriesType }
+  const categoriesGroup = { groups: categoriesGroups, type: categoriesType };
 
   return {
     props: {
@@ -103,5 +104,5 @@ export async function getServerSideProps() {
       categoryTypes,
       navigationItems,
     },
-  }
+  };
 }
