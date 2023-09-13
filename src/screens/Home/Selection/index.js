@@ -154,7 +154,7 @@ const Selection = ({ info, type }) => {
               className={cn('button-stroke button-small', styles.button)}
               href="/search"
             >
-              <span>Discover more</span>
+              <span>Find Healrs</span>
               <Icon name="arrow-next" size="10" />
             </AppLink>
           </div>
