@@ -84,14 +84,14 @@ const OAuth = ({ className, handleClose, handleOAuth, disable }) => {
     <div className={cn(className, styles.transfer)}>
       <div className={cn('h4', styles.title)}>
          No account? Sign up to{' '}
-        <AppLink target="_blank" href={`https://saved-squid-36.accounts.dev/sign-up`}>
+        <AppLink target="_blank" href={`https://accounts.healxyz.com/sign-up`}>
           HealXYZ
         </AppLink>
       </div>
       <div className={styles.text}>
          Heal®️s sign in to start {' '}
-        <AppLink target="_blank" href={`https://saved-squid-36.accounts.dev/sign-in`}>
-         Heal🇳
+        <AppLink target="_blank" href={`https://accounts.healxyz.com/sign-in`}>
+         Healn
         </AppLink>
       </div>
       <div className={styles.error}>{fillFiledMessage}</div>

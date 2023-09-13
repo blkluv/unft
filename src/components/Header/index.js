@@ -100,7 +100,7 @@ const Headers = ({ navigation }) => {
             </button>
           </SignedOut>
           <SignedIn>
-            <a href="https://saved-squid-36.accounts.dev/sign-in">Logout</a>
+            <a href="https://accounts.healxyz.com/sign-in">Logout</a>
           </SignedIn>
           <button
             aria-label="user-information"
