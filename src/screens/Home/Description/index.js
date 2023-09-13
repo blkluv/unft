@@ -25,7 +25,7 @@ const Description = ({ info }) => {
               onClick={() => handleClick(`/search`)}
               className={cn('button-stroke', styles.button)}
             >
-              Discover more
+              Find a Healr
             </button>
             <button
               aria-hidden="true"
