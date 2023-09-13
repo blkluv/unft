@@ -142,9 +142,9 @@ const Search = ({ categoriesGroup, navigationItems, categoryData }) => {
   return (
     <Layout navigationPaths={navigationItems[0]?.metadata}>
       <PageMeta
-        title={'Discover | uNFT Marketplace'}
+        title={'HealXYZ | Spirtual Marketplace'}
         description={
-          'uNFT Marketplace built with Cosmic CMS, Next.js, and the Stripe API'
+          'HealXYZ Marketplace connects individuals in need of healing with authentic healers'
         }
       />
       <div className={cn('section-pt80', styles.section)}>
