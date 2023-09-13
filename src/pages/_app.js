@@ -6,10 +6,7 @@ import '../styles/app.sass'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ClerkProvider
-      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-      // Here you can add whatever props you want. Check out here: https://clerk.com/docs/components/clerk-provider#props
-    >
+    <ClerkProvider {...pageProps}>
       <StateContext>
         <Toaster />
         <Component {...pageProps} />
