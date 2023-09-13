@@ -163,9 +163,9 @@ const Upload = ({ navigationItems, categoriesType }) => {
   return (
     <Layout navigationPaths={navigationItems[0]?.metadata || navigation}>
       <PageMeta
-        title={'Create Item | uNFT Marketplace'}
+        title={'HealXYZ | Spiritual Marketplace'}
         description={
-          'uNFT Marketplace built with Cosmic CMS, Next.js, and the Stripe API'
+          'HealXYZ Marketplace connects authentic healers with those who need to be healed.'
         }
       />
       <div className={cn('section', styles.section)}>
@@ -173,7 +173,7 @@ const Upload = ({ navigationItems, categoriesType }) => {
           <div className={styles.wrapper}>
             <div className={styles.head}>
               <div className={cn('h2', styles.title)}>
-                Create single Heal🇳
+                Start Healn
               </div>
             </div>
             <form className={styles.form} action="" onSubmit={submitForm}>
@@ -198,7 +198,7 @@ const Upload = ({ navigationItems, categoriesType }) => {
                   </div>
                 </div>
                 <div className={styles.item}>
-                  <div className={styles.category}>Heal🇳 Details</div>
+                  <div className={styles.category}>Healr Details</div>
                   <div className={styles.fieldset}>
                     <TextInput
                       className={styles.field}
@@ -261,7 +261,7 @@ const Upload = ({ navigationItems, categoriesType }) => {
                 </div>
               </div>
               <div className={styles.options}>
-                <div className={styles.category}>Choose tribe</div>
+                <div className={styles.category}>Choose Tribe</div>
                 <div className={styles.text}>Choose an exiting Categories</div>
                 <Cards
                   className={styles.cards}
