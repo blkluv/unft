@@ -58,7 +58,7 @@ const Home = ({
     <Layout navigationPaths={navigationItems[0]?.metadata}>
       <div id="getWaitlistContainer" data-waitlist_id="10645" data-widget_type="WIDGET_1"></div>
       <link rel="stylesheet" type="text/css" href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"/>
-      <script src="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js"></script>
+      <script async src="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js"></script>
 
       <Description info={chooseBySlug(landing, 'marketing')} />
       <HotBid classSection="section" info={categoriesGroup['groups'][0]} />
